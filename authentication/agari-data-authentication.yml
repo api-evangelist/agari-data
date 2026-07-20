@@ -1,0 +1,33 @@
+generated: '2026-07-17'
+method: searched
+source: https://developers.agari.com/agari-platform/docs/oauth-20
+docs: https://developers.agari.com/agari-platform/docs/access-and-authentication
+summary:
+  types:
+  - oauth2
+  oauth2_flows:
+  - clientCredentials
+  notes: >-
+    The Agari Platform API uses OAuth 2.0 with the client-credentials grant. A client_id and
+    client_secret are generated in the Agari platform, then exchanged at the token endpoint for a
+    temporary bearer access_token that is sent on every API request as an Authorization: Bearer
+    header. Access tokens are valid for 4 hours (14400 seconds); after expiry a new token must be
+    requested. No user-scoped OAuth (authorization code) flow and no API-key mechanism are documented.
+schemes:
+- name: OAuth2ClientCredentials
+  type: oauth2
+  flow: clientCredentials
+  token_url: https://api.agari.com/v1/ep/token
+  token_lifetime_seconds: 14400
+  bearer_header: 'Authorization: Bearer <access_token>'
+  regional_token_urls:
+  - product: Cloud Email Protection (US)
+    url: https://api.agari.com/v1/ep/token
+  - product: Brand Protection (US)
+    url: https://api.agari.com/v1/cp/token
+  - product: Brand Protection (EU)
+    url: https://api.agari-eu.com/v1/cp/token
+  sources:
+  - https://developers.agari.com/agari-platform/docs/oauth-20
+scopes: []
+scopes_note: The docs do not publish a named OAuth scope/permission reference; access is per client credential.
