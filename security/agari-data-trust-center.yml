@@ -1,0 +1,16 @@
+generated: '2026-07-17'
+method: searched
+probe: true
+source: https://www.fortra.com/platform/email-security
+url: https://www.fortra.com/platform/email-security
+certifications:
+- PCI DSS
+- HIPAA
+- GDPR
+evidence:
+- source: https://www.fortra.com/platform/email-security
+  keywords:
+  - pci dss
+  - hipaa
+  - trust center
+  - gdpr

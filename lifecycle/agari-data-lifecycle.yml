@@ -1,0 +1,28 @@
+generated: '2026-07-17'
+method: searched
+source: https://developers.agari.com/agari-platform
+versioning:
+  scheme: uri-path
+  current: v1
+  docs: https://developers.agari.com/agari-platform/docs
+regions:
+- name: US
+  products:
+  - product: Cloud Email Protection
+    base: https://api.agari.com/v1/ep
+  - product: Brand Protection
+    base: https://api.agari.com/v1/cp
+- name: EU
+  products:
+  - product: Brand Protection
+    base: https://api.agari-eu.com/v1/cp
+deprecation:
+  policy_url: null
+  sunset_header: false
+  notes: No public deprecation/sunset policy (RFC 8594) is documented.
+sla:
+  url: null
+  uptime_target: null
+status_page: null
+status_page_notes: No dedicated Agari platform status page was found; provider is part of Fortra Email Security.
+deprecated_operations: []

@@ -1,0 +1,36 @@
+# Agari Data (Fortra Email Security)
+
+> Agari Data is an enterprise email security company (now part of Fortra Email Security) using AI-driven identity intelligence and DMARC to stop phishing, business email compromise (BEC), and brand impersonation. The Agari Platform API provides OAuth 2.0 secured, RESTful JSON access to Cloud Email Protection and Brand Protection (DMARC) data for SIEM/SOAR integration.
+
+## APIs
+
+- [Agari Platform API](https://developers.agari.com/agari-platform): RESTful JSON API. Cloud Email Protection (/v1/ep) exposes monitored messages and policy events; Brand Protection (/v1/cp) exposes DMARC aggregate/forensic data. Base URL https://api.agari.com/v1/ep.
+
+## Authentication
+
+- [OAuth 2.0 guide](https://developers.agari.com/agari-platform/docs/oauth-20): Client-credentials grant; exchange client_id/client_secret at https://api.agari.com/v1/ep/token for a bearer access_token valid 4 hours.
+- [Access and Authentication](https://developers.agari.com/agari-platform/docs/access-and-authentication)
+
+## Docs
+
+- [Developer Documentation](https://developers.agari.com/agari-platform)
+- [Quick Start](https://developers.agari.com/agari-platform/docs/quick-start)
+- [Requests and Responses](https://developers.agari.com/agari-platform/docs/requests-and-responses)
+- [Interactive API Reference](https://developers.agari.com/agari-platform/docs/interactive-api-reference)
+- [API Reference Overview](https://developers.agari.com/agari-platform/reference/overview)
+- [Integrations](https://developers.agari.com/agari-platform/docs/integrations)
+
+## Repo Artifacts
+
+- Authentication profile: authentication/agari-data-authentication.yml
+- API conventions: conventions/agari-data-conventions.yml
+- Lifecycle: lifecycle/agari-data-lifecycle.yml
+- Conformance: conformance/agari-data-conformance.yml
+- Domain security (probed): security/agari-data-domain-security.yml
+- Trust center (probed): security/agari-data-trust-center.yml
+
+## Product
+
+- [Fortra's Agari](https://www.fortra.com/agari)
+- [DMARC Protection](https://emailsecurity.fortra.com/products/dmarc-protection)
+- [Blog](https://emailsecurity.fortra.com/blog)

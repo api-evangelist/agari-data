@@ -1,0 +1,27 @@
+generated: '2026-07-17'
+method: searched
+source: https://developers.agari.com/agari-platform/docs/oauth-20
+standards:
+- id: oauth2
+  conforms: true
+  evidence: 'API secured with OAuth 2.0 client-credentials grant (docs: OAuth 2.0 guide).'
+- id: oauth2-client-credentials
+  conforms: true
+  evidence: Token endpoint issues bearer access_token via client_credentials grant.
+- id: rest-json
+  conforms: true
+  evidence: RESTful interface using JSON payloads and standard HTTP status codes.
+- id: dmarc
+  conforms: true
+  evidence: Brand Protection product implements DMARC email authentication (RFC 7489).
+- id: oidc
+  conforms: false
+- id: rfc9457-problem-details
+  conforms: false
+  evidence: Docs do not advertise application/problem+json error format.
+- id: fapi
+  conforms: false
+- id: scim
+  conforms: false
+- id: json-api
+  conforms: false

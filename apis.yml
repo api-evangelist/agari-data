@@ -1,23 +1,102 @@
 aid: agari-data
+accessModel:
+  pricing: unknown
+  onboarding: self-serve
+  trial: false
+  try_now: false
+  public: false
+  label: Self-serve signup
+  confidence: medium
+  source:
+  - authentication
+  generated: '2026-07-22'
+  method: derived
+image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/agari-data.png
 name: Agari Data
-description: Agari Data is a company surfaced as a portfolio company of battery-ventures and added to
-  the API Evangelist network as a stub for enrichment. This profile is a lead awaiting the enrichment
-  pipeline.
+description: >-
+  Agari Data (now part of Fortra Email Security) is an enterprise email security company that uses
+  AI-driven identity intelligence and DMARC email authentication to stop advanced email attacks such
+  as phishing, business email compromise (BEC), and brand impersonation. The Agari Platform API gives
+  developers and security teams programmatic, OAuth 2.0 secured access to Cloud Email Protection and
+  Brand Protection (DMARC) data — including monitored messages, policy events, and threat telemetry —
+  so events can be ingested into SIEM/SOAR tools like Splunk and Microsoft Sentinel. The RESTful API
+  returns JSON, is versioned under a URI path (v1), and is split by product (Cloud Email Protection
+  under /ep, Brand Protection under /cp) with US and EU regional endpoints. Originally founded as
+  Agari Data and later acquired into HelpSystems/Fortra, it was surfaced as a portfolio company of
+  Battery Ventures.
 url: https://raw.githubusercontent.com/api-evangelist/agari-data/refs/heads/main/apis.yml
 x-type: company
 x-source: vc-portfolio
 x-backed-by:
 - battery-ventures
-x-tier: stub
-x-tier-reason: portfolio-lead
+x-tier: profile
+x-tier-reason: enriched-from-public-docs
 specificationVersion: '0.20'
 created: '2026-07-17'
 modified: '2026-07-17'
 tags:
 - Company
-apis: []
+- Email Security
+- Phishing Protection
+- DMARC
+- Business Email Compromise
+- Threat Intelligence
+- Cybersecurity
 maintainers:
 - FN: Kin Lane
   email: kin@apievangelist.com
 - FN: APIs.json
   email: info@apis.io
+apis:
+- name: Agari Platform API
+  description: >-
+    RESTful JSON API for the Agari platform (Fortra Email Security). Cloud Email Protection endpoints
+    (/v1/ep) expose monitored messages and policy events; Brand Protection / DMARC endpoints (/v1/cp)
+    expose aggregate and forensic DMARC data. Secured with OAuth 2.0 client-credentials access tokens.
+  humanURL: https://developers.agari.com/agari-platform
+  baseURL: https://api.agari.com/v1/ep
+  properties:
+  - type: APIReference
+    url: https://developers.agari.com/agari-platform/reference/overview
+  - type: Authentication
+    url: authentication/agari-data-authentication.yml
+  - type: Conventions
+    url: conventions/agari-data-conventions.yml
+  - type: Lifecycle
+    url: lifecycle/agari-data-lifecycle.yml
+  - type: Conformance
+    url: conformance/agari-data-conformance.yml
+common:
+- type: TrustCenter
+  url: security/agari-data-trust-center.yml
+- type: Compliance
+  url: https://www.fortra.com/platform/email-security
+- type: Conformance
+  url: conformance/agari-data-conformance.yml
+- type: Lifecycle
+  url: lifecycle/agari-data-lifecycle.yml
+- type: Conventions
+  url: conventions/agari-data-conventions.yml
+- type: DomainSecurity
+  url: security/agari-data-domain-security.yml
+- type: DeveloperPortal
+  url: https://developers.agari.com/agari-platform
+- type: Documentation
+  url: https://developers.agari.com/agari-platform/docs
+- type: APIReference
+  url: https://developers.agari.com/agari-platform/reference/overview
+- type: GettingStarted
+  url: https://developers.agari.com/agari-platform/docs/quick-start
+- type: Authentication
+  url: authentication/agari-data-authentication.yml
+- type: Website
+  url: https://www.agari.com/
+- type: Blog
+  url: https://emailsecurity.fortra.com/blog
+- type: LLMsTxt
+  url: llms/agari-data-llms.txt
+x-enrichment:
+  date: '2026-07-19'
+  status: backfilled
+  pass: local-v1
+  note: backfilled from .gitignore signal + verified work evidence

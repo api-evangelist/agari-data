@@ -1,0 +1,45 @@
+generated: '2026-07-17'
+method: searched
+source: https://developers.agari.com/agari-platform/docs/requests-and-responses
+docs:
+- https://developers.agari.com/agari-platform/docs/requests-and-responses
+- https://developers.agari.com/agari-platform/docs/access-and-authentication
+conventions:
+  transport: REST over HTTPS
+  media_type: application/json
+  authentication:
+    style: oauth2-client-credentials-bearer
+    header: 'Authorization: Bearer <access_token>'
+    ref: authentication/agari-data-authentication.yml
+  versioning:
+    style: uri-path
+    current: v1
+    example: https://api.agari.com/v1/ep/messages
+    ref: lifecycle/agari-data-lifecycle.yml
+  product_segmentation:
+    style: uri-path-product-segment
+    segments:
+    - segment: ep
+      product: Cloud Email Protection
+    - segment: cp
+      product: Brand Protection (DMARC)
+  pagination:
+    style: limit-offset
+    params:
+    - limit
+    - offset
+    notes: >-
+      List endpoints (e.g. list messages, policy events) cap the number of results per query and
+      support limit/offset paging; exact per-endpoint maximums are documented on each reference page.
+  idempotency:
+    supported: false
+    notes: The docs do not document an idempotency-key header or idempotent-write contract.
+  error_envelope:
+    format: http-status-json
+    problem_json: false
+    notes: >-
+      Responses use standard HTTP status codes with JSON bodies; the docs do not advertise
+      RFC 9457 application/problem+json.
+  rate_limit_signaling:
+    documented: false
+    notes: No published rate-limit header contract; list endpoints bound result size per query.
